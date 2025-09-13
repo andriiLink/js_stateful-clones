@@ -35,9 +35,8 @@ function transformStateWithClones(state, actions) {
         break;
 
       default:
-        stateHistory.push('Unexpected action!');
     }
-    stateHistory.push(stateClone);
+    stateHistory.push({ ...stateClone });
   }
 
   return stateHistory;
